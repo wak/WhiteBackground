@@ -11,22 +11,27 @@ namespace WhiteBackground
             this.Icon = FormIcon.icon();
         }
 
+        private void ContextMenu_normalizeWindow_Click(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        private void ContextMenu_maximizeWindow_Click(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.WindowState = FormWindowState.Maximized;
+        }
+
         private void contextMenu_fullScreen_Click(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void ContextMenu_maximizeWindow_Click(object sender, EventArgs e)
+        private void ContextMenu_hideTitleBar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.Sizable;
-        }
-
-        private void ContextMenu_normalizeWindow_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void ContextMenu_exitProgram_Click(object sender, EventArgs e)
