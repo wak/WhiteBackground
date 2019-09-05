@@ -11,6 +11,36 @@ namespace WhiteBackground
             this.Icon = FormIcon.icon();
         }
 
+        private void toggleFullscreen()
+        {
+            if (this.FormBorderStyle == FormBorderStyle.Sizable)
+            {
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.FormBorderStyle = FormBorderStyle.Sizable;
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void toggleWindowMaximized()
+        {
+            if (this.WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void toggleFormBorderStyleNone()
+        {
+            if (this.FormBorderStyle == FormBorderStyle.Sizable)
+                this.FormBorderStyle = FormBorderStyle.None;
+            else
+                this.FormBorderStyle = FormBorderStyle.Sizable;
+        }
+
         private void ContextMenu_normalizeWindow_Click(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.Sizable;
@@ -37,6 +67,31 @@ namespace WhiteBackground
         private void ContextMenu_exitProgram_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void WhiteWindow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            switch (e.KeyChar)
+            {
+                case 'q':
+                case 'w':
+                    Application.Exit();
+                    break;
+
+                case 'f':
+                    toggleWindowMaximized();
+                    break;
+
+                case 'm':
+                    toggleFormBorderStyleNone();
+                    //cwmEnterChangingWindowMode();
+                    break;
+
+                case 'g':
+                    toggleFullscreen();
+                    break;
+            }
         }
     }
 }

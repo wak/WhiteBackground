@@ -34,9 +34,9 @@
             this.contextMenu_maximizeWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenu_fullScreen = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.contextMenu_exitProgram = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenu_hideTitleBar = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.contextMenu_exitProgram = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,52 +51,52 @@
             this.toolStripSeparator2,
             this.contextMenu_exitProgram});
             this.contextMenu.Name = "contextMenu";
-            this.contextMenu.Size = new System.Drawing.Size(181, 148);
+            this.contextMenu.Size = new System.Drawing.Size(174, 126);
             // 
             // contextMenu_normalizeWindow
             // 
             this.contextMenu_normalizeWindow.Name = "contextMenu_normalizeWindow";
-            this.contextMenu_normalizeWindow.Size = new System.Drawing.Size(180, 22);
+            this.contextMenu_normalizeWindow.Size = new System.Drawing.Size(173, 22);
             this.contextMenu_normalizeWindow.Text = "通常化";
             this.contextMenu_normalizeWindow.Click += new System.EventHandler(this.ContextMenu_normalizeWindow_Click);
             // 
             // contextMenu_maximizeWindow
             // 
             this.contextMenu_maximizeWindow.Name = "contextMenu_maximizeWindow";
-            this.contextMenu_maximizeWindow.Size = new System.Drawing.Size(180, 22);
+            this.contextMenu_maximizeWindow.Size = new System.Drawing.Size(173, 22);
             this.contextMenu_maximizeWindow.Text = "最大化";
             this.contextMenu_maximizeWindow.Click += new System.EventHandler(this.ContextMenu_maximizeWindow_Click);
             // 
             // contextMenu_fullScreen
             // 
             this.contextMenu_fullScreen.Name = "contextMenu_fullScreen";
-            this.contextMenu_fullScreen.Size = new System.Drawing.Size(180, 22);
+            this.contextMenu_fullScreen.Size = new System.Drawing.Size(173, 22);
             this.contextMenu_fullScreen.Text = "フルスクリーン";
             this.contextMenu_fullScreen.Click += new System.EventHandler(this.contextMenu_fullScreen_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // contextMenu_exitProgram
-            // 
-            this.contextMenu_exitProgram.Name = "contextMenu_exitProgram";
-            this.contextMenu_exitProgram.Size = new System.Drawing.Size(180, 22);
-            this.contextMenu_exitProgram.Text = "終了";
-            this.contextMenu_exitProgram.Click += new System.EventHandler(this.ContextMenu_exitProgram_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(170, 6);
             // 
             // contextMenu_hideTitleBar
             // 
             this.contextMenu_hideTitleBar.Name = "contextMenu_hideTitleBar";
-            this.contextMenu_hideTitleBar.Size = new System.Drawing.Size(180, 22);
+            this.contextMenu_hideTitleBar.Size = new System.Drawing.Size(173, 22);
             this.contextMenu_hideTitleBar.Text = "タイトルバーを非表示";
             this.contextMenu_hideTitleBar.Click += new System.EventHandler(this.ContextMenu_hideTitleBar_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(170, 6);
+            // 
+            // contextMenu_exitProgram
+            // 
+            this.contextMenu_exitProgram.Name = "contextMenu_exitProgram";
+            this.contextMenu_exitProgram.Size = new System.Drawing.Size(173, 22);
+            this.contextMenu_exitProgram.Text = "終了";
+            this.contextMenu_exitProgram.Click += new System.EventHandler(this.ContextMenu_exitProgram_Click);
             // 
             // WhiteWindow
             // 
@@ -107,6 +107,7 @@
             this.ContextMenuStrip = this.contextMenu;
             this.Name = "WhiteWindow";
             this.Text = "White Background";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WhiteWindow_KeyPress);
             this.contextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
